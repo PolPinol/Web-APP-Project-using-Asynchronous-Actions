@@ -1,5 +1,5 @@
 const expressDomain = 'http://localhost';
-const expressPort = '8080';
+const expressPort = '3000';
 const expressDomainAndPort = `${expressDomain}:${expressPort}`;
 
 module.exports = {
