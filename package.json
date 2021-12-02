@@ -1,0 +1,29 @@
+{
+  "name": "pj2-pw",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "prebuild": "del /S /Q dist",
+    "build": "node build/build.js",
+    "dev:build-watch": "node build/build-watch.js",
+    "dev:livereload": "node build/livereload.js"
+  },
+  "keywords": [
+    "PJ1"
+  ],
+  "author": "Inés Graells - Pol Piñol - Alexia Cabrera",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.27.5",
+    "check-html-links": "0.2.3",
+    "clean-css": "5.2.1",
+    "esbuild": "0.13.4",
+    "fs-extra": "10.0.0",
+    "html-minifier": "^4.0.0"
+  },
+  "description": ""
+}
