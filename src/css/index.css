@@ -8,10 +8,28 @@ body{
 }
 /***********Header**********/
 header{
+    width: 98%;
+    height: 10vh;
     display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-column-gap: .5%;
+    align-items: center;
 }
-
-h1{
+/*****Logo****/
+header p{
+    grid-column-start: 1;
+    grid-column-end: 2;
     font-size: large;
+    background-color: gray;
+    margin: 0px;
+    height: 50%;
+    width: fit-content;
+}
+/*****Title****/
+header h1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: center;
+    font-size: xx-large;
     font-weight: 300;
 }
