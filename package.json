@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf ./dist/*",
     "build": "node build/build.js",
     "dev:build-watch": "node build/build-watch.js",
     "dev:livereload": "node build/livereload.js"
@@ -25,5 +25,13 @@
     "fs-extra": "10.0.0",
     "html-minifier": "^4.0.0"
   },
-  "description": ""
+  "description": "The objective of the project is to develop a simple web app that interacts with an API asynchronously using HTML, CSS and JavaScript languages.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolPinol/Web-APP-Project-using-Asynchronous-Actions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PolPinol/Web-APP-Project-using-Asynchronous-Actions/issues"
+  },
+  "homepage": "https://github.com/PolPinol/Web-APP-Project-using-Asynchronous-Actions#readme"
 }
