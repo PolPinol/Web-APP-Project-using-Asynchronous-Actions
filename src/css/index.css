@@ -1,3 +1,17 @@
-body {
-    font-weight: 700;
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*************Entire page************/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/***********Header**********/
+header{
+    display: grid;
+}
+
+h1{
+    font-size: large;
+    font-weight: 300;
 }
