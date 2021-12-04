@@ -10,26 +10,77 @@ body{
 header{
     width: 98%;
     height: 10vh;
-    display: grid;
-    grid-template-columns: 24% 24% 24% 24%;
-    grid-column-gap: .5%;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 /*****Logo****/
 header p{
-    grid-column-start: 1;
-    grid-column-end: 2;
     font-size: large;
     background-color: gray;
     margin: 0px;
-    height: 50%;
     width: fit-content;
+    padding: 1.5vw 1vw 1.5vw 1vw;
+    margin: 4vw;
+    font-weight: 600;
+    color: white;
 }
 /*****Title****/
 header h1{
-    grid-column-start: 2;
-    grid-column-end: 4;
     justify-self: center;
     font-size: xx-large;
     font-weight: 300;
+    width:75%;
+    text-align: center;
+    font-weight: 600;
+}
+/********Main Body**********/
+main{
+    background-color: blue;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+}
+
+.searchItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/****Search button****/
+#search{
+    font-size: large;
+    background-color: greenyellow;
+    color: blue;
+    font-weight: 600;
+    margin: 0px;
+    width: fit-content;
+    padding: 1.5vw 1vw 1.5vw 1vw;
+    margin: 4vw;
+}
+/*****Search box****/
+.searchBox{
+    width: 280px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 10px;
+    justify-content: flex-end;
+}
+
+input{
+    width: 250px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border-width: 0px;
+    font-family: inherit;
+    font-size: large;
+    font-weight: 400;
+    padding-left: 10px;
+    outline: none;
 }
