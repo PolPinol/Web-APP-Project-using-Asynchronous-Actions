@@ -37,11 +37,14 @@ header h1{
 /********Main Body**********/
 main{
     background-color: blue;
+    color: blue;
     width: 98%;
+    height: 98%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2vw;
+    padding-bottom: 2vw;
 }
 
 .searchItems{
@@ -53,12 +56,11 @@ main{
 #search{
     font-size: large;
     background-color: greenyellow;
-    color: blue;
     font-weight: 600;
     margin: 0px;
     width: fit-content;
     padding: 1.5vw 1vw 1.5vw 1vw;
-    margin: 4vw;
+    margin: 4vw 4vw 4vw 0;
 }
 /*****Search box****/
 .searchBox{
@@ -83,4 +85,81 @@ input{
     font-weight: 400;
     padding-left: 10px;
     outline: none;
+}
+/******List element******/
+.element{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 2vw;
+}
+
+.bigElement{
+    width:80%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 2vw;
+}
+
+.infoStruct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-left: 2vw;
+}
+
+.bigInfoStruct{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.bigInfoStruct h1{
+    width: fit-content;
+    font-size: 2vw;
+}
+
+.bigInfoStruct img{
+    width: 100%;
+}
+/*******Info******/
+#info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#info h1{
+    font-size: 2vw;
+    margin-bottom: 0;
+}
+
+#info h2{
+    font-size: 1.5vw;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.lore{
+    align-self: center;
+}
+/******Plus icon*****/
+#more{
+    justify-self: flex-end;
+    width:fit-content;
+    font-size: 3vw;
+    color:rgb(0, 255, 42);
+}
+/*******Minus icon********/
+#less{
+    justify-self: flex-end;
+    width:fit-content;
+    font-size: 3vw;
+    color:red;
 }
