@@ -58,27 +58,22 @@ main{
     background-color: greenyellow;
     font-weight: 600;
     margin: 0px;
+    border: none;
     width: fit-content;
     padding: 1.5vw 1vw 1.5vw 1vw;
     margin: 4vw 4vw 4vw 0;
-}
-/*****Search box****/
-.searchBox{
-    width: 280px;
-    height: 40px;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-right: 10px;
-    justify-content: flex-end;
+    transition: all .5s;
 }
 
+#search:hover{
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+/*****Search box****/
 input{
     width: 250px;
-    height: 30px;
+    height: 40px;
     background-color: white;
-    border-radius: 5px;
     border-width: 0px;
     font-family: inherit;
     font-size: large;
@@ -88,7 +83,7 @@ input{
 }
 /******List element******/
 .element{
-    width: 40%;
+    width: 400px;
     display: flex;
     flex-direction: row;
     background-color: white;
@@ -96,7 +91,7 @@ input{
 }
 
 .bigElement{
-    width:80%;
+    width:800px;
     display: flex;
     flex-direction: row;
     background-color: white;
