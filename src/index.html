@@ -8,8 +8,9 @@
         <meta name="description" content="Pàgina principal de la pàgina web">
         <meta name="keywords" content="overwatch"/>
         <meta name="googlebot" content="noindex">
-        <link rel="stylesheet" href="./css/styles.css"> <!-- Vincular con el archivo css -->
-        <script type="text/javascript" src="./js/pages/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="styles.css"> <!-- Vincular con el archivo css -->
+        <script type="module" src="./js/pages/index.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"rel="stylesheet">
@@ -32,35 +33,19 @@
                 </form>
             </section>
             <!--Little elements-->
-            <section class="element">
-                <img src="https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/hero-select-portrait.png">
-                <section class="infoStruct">
-                    <section id="info">
-                        <h1>Hanzo</h1>
-                        <h2>Age: 38</h2>
-                        <h2>Occupation: Mercenary</h2>
-                    </section>
-                    <span id="more" class="material-icons-outlined">add</span>
+            <div id="overwatch">
+                <div v-if="characters.length === 0">
+                  Loading...
+                </div>
+        
+                <section v-else>
+                  <character-label
+                        v-for="character in characters"
+                        v-bind:data="character"
+                        v-bind:key="character.key"
+                    ></character-label>
                 </section>
-            </section>
-            <!--Big elements-->
-            <section class="bigElement">
-                <section class="bigInfoStruct">
-                    <h1 id="name">Mercy</h1>
-                    <img src="https://d1u1mce87gyfbn.cloudfront.net/hero/hanzo/hero-select-portrait.png">
-                </section>
-                <section class="infoStruct">
-                    <section id="info">
-                        <h2><b>Age:</b> 37</h2>
-                        <h2><b>Occupation:</b> Medic field</h2>
-                        <h2><b>Operations base:</b> Zürich, Switzerland</h2>
-                        <h2><b>Affiliation:</b> Overwatch</h2>
-                        <h2 class="lore"><b>Lore</b></h2>
-                        <h2 class="description">Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staf</h2>
-                    </section>
-                    <span id="less" class="material-icons-outlined">remove</span>
-                </section>
-            </section>
+              </div>
         </main>
     </body>
 </html>

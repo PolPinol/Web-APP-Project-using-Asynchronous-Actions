@@ -4,7 +4,27 @@
  * @author: Inés Graells - Pol Piñol - Alexia Cabrera
  */
 
- import ApiInfo from "../components/api";
-
-const api = new ApiInfo();
-const names = api.getNames();
+ import {} from "../components/label";
+ import Api from "../services/api";
+ 
+ const app = new Vue({
+   el: "#overwatch",
+   data: () => {
+     return {
+       characters: [],
+       data: "",
+       searchInput: ""
+     };
+   },
+   mounted() {
+     this.loadData();
+   },
+   methods: {
+     loadData() {
+       const getCharacters = new Api();
+       getCharacters.execute().then( data  => {
+         this.$root.characters = data;
+       });
+     }
+   }
+ });

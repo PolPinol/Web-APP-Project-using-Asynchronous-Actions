@@ -25,7 +25,7 @@ module.exports = {
         }
     },
     css: {
-        outDir: './dist/css',
+        outDir: './dist',
     },
     js : {
         outDir: './dist/js/pages'
