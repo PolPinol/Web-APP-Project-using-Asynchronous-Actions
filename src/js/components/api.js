@@ -6,28 +6,20 @@
 
 class ApiInfo{
     constructor(){
-        this.characters = {}
-        this.request = new Request('http://localhost:3000/api/list?search=', {
-            method: 'GET'
-            
-        });
+        this.names = loadNames();
     }
 
-    saveData(){
-        this.characters = fetch(this.request)
-            .then(response => {
-                return response.json()})
-            .then(data => { 
-                console.log('Success:', data[0]["key"]);
-                return data})
-            .catch((error) => { 
-                console.error('Error:', error) })
+    getNames(){
+        console.log(this.names)
+        return this.names;
     }
+}
 
-    getData(){
-        console.log(this.characters)
-        return this.characters;
-    }
+async function loadNames() {
+    const response = await fetch('http://localhost:3000/api/list?search=');
+    const names = await response.json().then(names => {return names});
+    console.log(names);
+    // logs [{ name: 'Joker'}, { name: 'Batman' }]
 }
 
 export default ApiInfo;

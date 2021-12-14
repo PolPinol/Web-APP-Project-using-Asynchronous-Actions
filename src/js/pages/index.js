@@ -7,7 +7,4 @@
 import ApiInfo from "../components/api";
 
 const api = new ApiInfo();
-api.saveData();
-var data = api.getData();
-
-console.log(data);
+const names = api.getNames();
