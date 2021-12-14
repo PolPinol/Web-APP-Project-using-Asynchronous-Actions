@@ -36,8 +36,7 @@ header h1{
 }
 /********Main Body**********/
 main{
-    background-color: blue;
-    color: blue;
+    background-color: gray;
     width: 98%;
     height: 98%;
     display: flex;
@@ -157,4 +156,11 @@ input{
     width:fit-content;
     font-size: 3vw;
     color:red;
+}
+
+.all-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }

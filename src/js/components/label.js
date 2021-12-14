@@ -7,7 +7,7 @@ Vue.component("character-label", {
     props: {
       data: Object
     },
-    template: `<div><section class="element" v-on:click="loadMoreInfo" v-show='visible===false'>
+    template: `<div class="all-elements"><section class="element" v-on:click="loadMoreInfo" v-show='visible===false'>
                     <img :src=data.portrait>
                     <section class="infoStruct">
                         <section id="info">
