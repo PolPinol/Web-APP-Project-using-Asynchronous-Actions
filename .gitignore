@@ -3,3 +3,7 @@ node_modules
 dist
 
 package.json
+
+package-lock.json
+
+README.md
