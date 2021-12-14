@@ -1,17 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 /*************Entire page************/
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /***********Header**********/
-header{
-    display: grid;
+header {
+    width: 98%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-h1{
+/*****Logo****/
+header p {
     font-size: large;
+    background-color: gray;
+    margin: 0px;
+    width: fit-content;
+    padding: 1.5vw 1vw 1.5vw 1vw;
+    margin: 4vw;
+    font-weight: 600;
+    color: white;
+}
+
+/*****Title****/
+header h1 {
+    justify-self: center;
+    font-size: xx-large;
     font-weight: 300;
+    width:75%;
+    text-align: center;
+    font-weight: 600;
+}
+
+/********Main Body**********/
+main {
+    background-color: gray;
+    width: 98%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2vw;
+    padding-bottom: 2vw;
+}
+
+.searchItems{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/****Search button****/
+.search {
+    font-size: large;
+    background-color: greenyellow;
+    font-weight: 600;
+    margin: 0px;
+    border: none;
+    width: fit-content;
+    padding: 1vw 1vw 1vw 1vw;
+    margin: 4vw 4vw 4vw 0;
+    transition: all .5s;
+}
+
+.search:hover {
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+/*****Search box****/
+.input {
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    border-width: 0px;
+    font-family: inherit;
+    font-size: large;
+    font-weight: 400;
+    padding-left: 10px;
+    outline: none;
+}
+
+/******List element******/
+.element {
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 2vw;
+}
+
+.bigElement {
+    max-width:800px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 2vw;
+}
+
+.infoStruct {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-left: 2vw;
+}
+
+.bigInfoStruct {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.bigInfoStruct h1 {
+    width: fit-content;
+    font-size: 30px;
+}
+
+.bigInfoStruct img {
+    width: 100%;
+}
+
+/*******More Info******/
+#info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 5px;
+}
+
+#info h1 {
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+#info h2 {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.lore {
+    align-self: center;
+}
+
+/******Plus icon*****/
+#more {
+    justify-self: flex-end;
+    width:fit-content;
+    font-size: 3vw;
+    color:rgb(0, 255, 42);
+}
+
+/*******Minus icon********/
+#less {
+    justify-self: flex-end;
+    width:fit-content;
+    font-size: 3vw;
+    color:red;
+}
+
+.all-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
 }

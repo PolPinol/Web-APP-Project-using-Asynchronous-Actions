@@ -4,20 +4,50 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Inés Graells - Pol Pinol - Alexia">
+        <meta name="author" content="Inés Graells - Pol Pinol - Alexia Cabrera">
         <meta name="description" content="Pàgina principal de la pàgina web">
         <meta name="keywords" content="overwatch"/>
         <meta name="googlebot" content="noindex">
-        <link rel="stylesheet" href="./css/styles.css"> <!-- Vincular con el archivo css -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <script type="module" src="./js/pages/index.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
         <title>Main view</title>
     </head>
     <body>
+        <!-- Start of the Header -->
         <header>
-            <div>Logo</div>
-            <h1>PAGE TITLE</h1>
+            <p>Logo</p>
+            <h1>OVERWATCH</h1>
         </header>
-        <main>
 
+        <main>
+            <!-- Start of search form and list characters -->
+            <div id="overwatch">
+                
+                <!-- Start of the form - search -->
+                <section class="searchItems">
+                    <search-form></search-form>
+                </section>
+
+                <!-- Message if no characters are found -->
+                <div v-if="characters.length === 0">
+                  No characters found.
+                </div>
+        
+                <!-- Start of the list of characters -->
+                <section v-else>
+                  <character-label
+                        v-for="character in characters"
+                        v-bind:data="character"
+                        v-bind:key="character.key"
+                    ></character-label>
+                </section>
+            </div>
         </main>
     </body>
 </html>

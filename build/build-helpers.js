@@ -49,7 +49,7 @@ function buildAssets() {
     buildCss();
 
     // Copy Media directory
-    buildMedia();
+    // buildMedia();
 }
 
 module.exports = buildAssets;
