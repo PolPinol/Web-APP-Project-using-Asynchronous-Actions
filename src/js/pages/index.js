@@ -6,5 +6,5 @@
 
  import ApiInfo from "../components/api";
 
- const api = new ApiInfo();
- const names = api.getNames();
+const api = new ApiInfo();
+const names = api.getNames();
