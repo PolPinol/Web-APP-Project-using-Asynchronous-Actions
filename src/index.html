@@ -9,35 +9,37 @@
         <meta name="keywords" content="overwatch"/>
         <meta name="googlebot" content="noindex">
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-        <link rel="stylesheet" href="styles.css"> <!-- Vincular con el archivo css -->
+        <link rel="stylesheet" href="styles.css">
         <script type="module" src="./js/pages/index.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons"rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round"rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp"rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone"rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Sharp" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Two+Tone" rel="stylesheet">
         <title>Main view</title>
     </head>
     <body>
+        <!-- Start of the Header -->
         <header>
-            <!--Header-->
             <p>Logo</p>
-            <h1>PAGE TITLE</h1>
+            <h1>OVERWATCH</h1>
         </header>
+
         <main>
-            <section class="searchItems">
-                <!--Searcher-->
-                <form action="/api/detail" method="POST" id ="inputBuscador">
-                    <button id="search">SEARCH</button>
-                    <input type="input" name="key" size="50">
-                </form>
-            </section>
-            <!--Little elements-->
+            <!-- Start of search form and list characters -->
             <div id="overwatch">
+                
+                <!-- Start of the form - search -->
+                <section class="searchItems">
+                    <search-form></search-form>
+                </section>
+
+                <!-- Message if no characters are found -->
                 <div v-if="characters.length === 0">
-                  Loading...
+                  No characters found.
                 </div>
         
+                <!-- Start of the list of characters -->
                 <section v-else>
                   <character-label
                         v-for="character in characters"
@@ -45,7 +47,7 @@
                         v-bind:key="character.key"
                     ></character-label>
                 </section>
-              </div>
+            </div>
         </main>
     </body>
 </html>

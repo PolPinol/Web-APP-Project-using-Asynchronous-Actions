@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 /*************Entire page************/
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /***********Header**********/
-header{
+header {
     width: 98%;
     height: 10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
+
 /*****Logo****/
-header p{
+header p {
     font-size: large;
     background-color: gray;
     margin: 0px;
@@ -25,8 +25,9 @@ header p{
     font-weight: 600;
     color: white;
 }
+
 /*****Title****/
-header h1{
+header h1 {
     justify-self: center;
     font-size: xx-large;
     font-weight: 300;
@@ -34,8 +35,9 @@ header h1{
     text-align: center;
     font-weight: 600;
 }
+
 /********Main Body**********/
-main{
+main {
     background-color: gray;
     width: 98%;
     height: 98%;
@@ -50,26 +52,29 @@ main{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
+
 /****Search button****/
-#search{
+.search {
     font-size: large;
     background-color: greenyellow;
     font-weight: 600;
     margin: 0px;
     border: none;
     width: fit-content;
-    padding: 1.5vw 1vw 1.5vw 1vw;
+    padding: 1vw 1vw 1vw 1vw;
     margin: 4vw 4vw 4vw 0;
     transition: all .5s;
 }
 
-#search:hover{
+.search:hover {
     background-color: red;
     color: rgb(255, 255, 255);
 }
+
 /*****Search box****/
-input{
+.input {
     width: 250px;
     height: 40px;
     background-color: white;
@@ -80,24 +85,27 @@ input{
     padding-left: 10px;
     outline: none;
 }
+
 /******List element******/
-.element{
-    width: 400px;
+.element {
+    max-width: 400px;
+    width: 90%;
     display: flex;
     flex-direction: row;
     background-color: white;
     margin-bottom: 2vw;
 }
 
-.bigElement{
-    width:800px;
+.bigElement {
+    max-width:800px;
+    width: 90%;
     display: flex;
     flex-direction: row;
     background-color: white;
     margin-bottom: 2vw;
 }
 
-.infoStruct{
+.infoStruct {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -106,52 +114,55 @@ input{
     padding-left: 2vw;
 }
 
-.bigInfoStruct{
-    width: 30%;
+.bigInfoStruct {
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
 }
 
-.bigInfoStruct h1{
+.bigInfoStruct h1 {
     width: fit-content;
-    font-size: 2vw;
+    font-size: 30px;
 }
 
-.bigInfoStruct img{
+.bigInfoStruct img {
     width: 100%;
 }
-/*******Info******/
-#info{
+
+/*******More Info******/
+#info {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-right: 5px;
 }
 
-#info h1{
-    font-size: 2vw;
+#info h1 {
+    font-size: 30px;
     margin-bottom: 0;
 }
 
-#info h2{
-    font-size: 1.5vw;
+#info h2 {
     font-weight: 300;
     margin-bottom: 0;
 }
 
-.lore{
+.lore {
     align-self: center;
 }
+
 /******Plus icon*****/
-#more{
+#more {
     justify-self: flex-end;
     width:fit-content;
     font-size: 3vw;
     color:rgb(0, 255, 42);
 }
+
 /*******Minus icon********/
-#less{
+#less {
     justify-self: flex-end;
     width:fit-content;
     font-size: 3vw;

@@ -1,12 +1,17 @@
+// Vue component for each character. The component is composed by a visible data (less info) and an invisible data (more info).
 Vue.component("character-label", {
+    // Data that shows the LessInfo section or the MoreInfo section
     data(){
         return {
             visible : false,
         }
     },
+
     props: {
       data: Object
     },
+
+    // HTML from each character
     template: `<div class="all-elements"><section class="element" v-on:click="loadMoreInfo" v-show='visible===false'>
                     <img :src=data.portrait>
                     <section class="infoStruct">
@@ -32,6 +37,8 @@ Vue.component("character-label", {
                         <span id="less" class="material-icons-outlined">remove</span>
                     </section>
                 </section></div>`,
+    
+    // Methods that changes variable visible
     methods: {
         loadMoreInfo() {
             this.visible = true;
