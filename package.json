@@ -15,7 +15,10 @@
   "author": "Inés Graells - Pol Piñol - Alexia Cabrera",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1"
+    "cors": "^2.8.5",
+    "express": "4.17.1",
+    "fs": "*",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
     "browser-sync": "2.27.5",
@@ -25,5 +28,13 @@
     "fs-extra": "10.0.0",
     "html-minifier": "^4.0.0"
   },
-  "description": ""
+  "description": "The objective of the project is to develop a simple web app that interacts with an API asynchronously using HTML, CSS and JavaScript languages.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolPinol/Web-APP-Project-using-Asynchronous-Actions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PolPinol/Web-APP-Project-using-Asynchronous-Actions/issues"
+  },
+  "homepage": "https://github.com/PolPinol/Web-APP-Project-using-Asynchronous-Actions#readme"
 }
