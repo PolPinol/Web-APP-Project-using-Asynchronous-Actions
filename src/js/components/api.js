@@ -4,7 +4,7 @@
  * @author: Inés Graells - Pol Piñol - Alexia Cabrera
  */
 
-class ApiInfo{
+ class ApiInfo{
     constructor(){
         this.names = loadNames();
     }

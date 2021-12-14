@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "prebuild": "rm -rf ./dist/*",
+    "prebuild": "del /S /Q dist",
     "build": "node build/build.js",
     "dev:build-watch": "node build/build-watch.js",
     "dev:livereload": "node build/livereload.js"
@@ -15,9 +15,10 @@
   "author": "Inés Graells - Pol Piñol - Alexia Cabrera",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1",
     "cors": "^2.8.5",
-    "fs": "*"
+    "express": "4.17.1",
+    "fs": "*",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
     "browser-sync": "2.27.5",
